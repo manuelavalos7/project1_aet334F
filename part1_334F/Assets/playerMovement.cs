@@ -72,7 +72,7 @@ public class playerMovement : MonoBehaviour
             CoinText.text = "Coins: " + coins;// change coin text to show updated number of coins
             Destroy(other.gameObject);// destroy the coin
         }
-        if (other.tag == "Key") {// if character touches key
+        if (other.tag == "Key") {// if character touches key (chest is also tagged as key for same effect)
             hasKey = true; // Character has key so they can open gate
             Instantiate(Resources.Load("particleEffect"), transform.position, transform.rotation);// play particle effect from resources folder
             Destroy(other.gameObject);//destroy the key
